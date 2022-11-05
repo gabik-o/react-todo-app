@@ -97,7 +97,7 @@ function App() {
   return (
     <div className="vh-100 code flex flex-column items-center bg-purple white pa3 fl-1">
       <h1 className="f2-l">
-        GraphQL Checklist{" "}
+        Today's Checklist{" "}
         <span role="img" aria-label="Checkmark">
           ✅
         </span>
@@ -118,8 +118,8 @@ function App() {
       {/* Todo List */}
       <div className="flex items-center justify-center flex-column">
         {data.todos.map(todo => (
-          <p onDoubleClick={() => handleToggleTodo(todo)} key={todo.id}>
-            <span className={`pointer list pa1 f3 ${todo.done && "strike"}`}>
+          <p className="outline pa2" onDoubleClick={() => handleToggleTodo(todo)} key={todo.id}>
+            <span className={`pointer list pa3 f3 ${todo.done && "strike"}`}>
               {todo.text}
             </span>
             <button
